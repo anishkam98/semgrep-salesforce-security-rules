@@ -112,3 +112,19 @@ rules:
 ```
 
 This rule detects when Salesforce Public Links functionality is enabled at the org configuration level through metadata XML. Public Links can introduce external file-sharing and data exposure risks if not properly governed.
+
+---
+
+# Example Findings
+
+Example Semgrep detections against intentionally vulnerable Salesforce metadata demonstrating detection of:
+
+- Public Links enabled
+- Content Deliveries enabled
+- Portal/community public link exposure
+- Public link permissions in permission sets
+- Personal workspace distribution permissions
+
+![Example Findings](docs/images/example-findings.png)
+
+These findings demonstrate how Salesforce metadata configuration alone can introduce meaningful security exposure and why SaaS/AppSec analysis must extend beyond Apex source code scanning.
