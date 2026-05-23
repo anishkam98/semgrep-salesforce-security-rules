@@ -95,14 +95,12 @@ Examples:
 
 ```yaml
 rules:
-  - id: salesforce-guest-user-permissions
+  - id: salesforce-public-links-enabled
     pattern: |
-      <userPermissions>
-        <enabled>true</enabled>
-        <name>ModifyAllData</name>
-      </userPermissions>
+      <enableChatterFileLink>true</enableChatterFileLink>
 
-    message: Dangerous permission enabled for Salesforce profile or permission set.
+    message: Salesforce Public Links are enabled. Public file links can expose files externally.
+
     severity: ERROR
 
     languages:
@@ -110,5 +108,7 @@ rules:
 
     paths:
       include:
-        - "*.profile-meta.xml"
-        - "*.permissionset-meta.xml"
+        - "Content.settings-meta.xml"
+```
+
+This rule detects when Salesforce Public Links functionality is enabled at the org configuration level through metadata XML. Public Links can introduce external file-sharing and data exposure risks if not properly governed.
