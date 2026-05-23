@@ -1,0 +1,11 @@
+rules:
+- id: salesforce-create-public-links-permission
+  pattern: "<userPermissions>\n    <enabled>true</enabled>\n    <name>ChatterFileLink</name>\n</userPermissions>\n"
+  message: Profile or permission set grants Create Public Links permission. Review users assigned this access and external file-sharing risk.
+  severity: ERROR
+  languages:
+  - generic
+  paths:
+    include:
+    - '*.permissionset-meta.xml'
+    - '*.profile-meta.xml'
