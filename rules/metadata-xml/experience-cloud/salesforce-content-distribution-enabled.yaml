@@ -1,0 +1,12 @@
+rules:
+- id: salesforce-content-distribution-enabled
+  pattern: '<enableContentDistribution>true</enableContentDistribution>
+
+    '
+  message: Salesforce Content Deliveries are enabled. Review external file-sharing and public exposure risk.
+  severity: WARNING
+  languages:
+  - generic
+  paths:
+    include:
+    - Content.settings-meta.xml

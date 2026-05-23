@@ -1,0 +1,11 @@
+rules:
+- id: salesforce-create-content-deliveries-permission
+  pattern: "<userPermissions>\n    <enabled>true</enabled>\n    <name>CreateContentDeliveries</name>\n</userPermissions>\n"
+  message: Profile or permission set grants Create Content Deliveries permission. Review external file-sharing risk.
+  severity: WARNING
+  languages:
+  - generic
+  paths:
+    include:
+    - '*.permissionset-meta.xml'
+    - '*.profile-meta.xml'

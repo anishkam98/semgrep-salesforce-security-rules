@@ -1,0 +1,11 @@
+rules:
+- id: salesforce-distribute-from-personal-workspace
+  pattern: "<userPermissions>\n    <enabled>true</enabled>\n    <name>DistributeFromPersWksp</name>\n</userPermissions>\n"
+  message: Profile or permission set allows distributing files from personal workspace. Review content delivery/public sharing exposure.
+  severity: WARNING
+  languages:
+  - generic
+  paths:
+    include:
+    - '*.permissionset-meta.xml'
+    - '*.profile-meta.xml'
