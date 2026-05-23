@@ -1,0 +1,12 @@
+rules:
+- id: salesforce-public-links-enabled
+  pattern: '<enableChatterFileLink>true</enableChatterFileLink>
+
+    '
+  message: Salesforce Public Links are enabled. Public file links can expose files externally.
+  severity: ERROR
+  languages:
+  - generic
+  paths:
+    include:
+    - Content.settings-meta.xml
