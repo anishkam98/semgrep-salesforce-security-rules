@@ -1,0 +1,15 @@
+rules:
+  - id: salesforce-guest-user-permissions
+    pattern: |
+      <userPermissions>
+        <enabled>true</enabled>
+        <name>ModifyAllData</name>
+      </userPermissions>
+    message: Dangerous permission enabled for Salesforce profile or permission set.
+    severity: ERROR
+    languages:
+      - generic
+    paths:
+      include:
+        - "*.profile-meta.xml"
+        - "*.permissionset-meta.xml"

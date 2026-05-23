@@ -1,0 +1,10 @@
+rules:
+  - id: salesforce-public-experience-risk
+    pattern-regex: "allowGuestUsers"
+    message: Review Experience Cloud guest user exposure settings.
+    severity: WARNING
+    languages:
+      - generic
+    paths:
+      include:
+        - "*.site-meta.xml"

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Semgrep
+.semgrep/
+.semgrep_logs/
+
+# Salesforce DX
+.sfdx/
+.sf/
+
+# Environment variables
+.env
+.env.*
+
+# Test output
+test-results/
+coverage/
+
+# Node
+node_modules/
+
+# Logs
+*.log
